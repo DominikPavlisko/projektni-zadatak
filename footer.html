@@ -1,0 +1,16 @@
+<footer>
+    <p>Autor: Dominik Pavlisko | Kontakt: dpavlisk1@tvz.hr | Godina: 2024</p>
+</footer>
+
+<script>
+    function updateDateTime() {
+        var now = new Date();
+        var days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var datetimeElement = document.getElementById('datetime');
+        var datetimeString = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate() + ', ' + now.getFullYear();
+        datetimeElement.textContent = datetimeString;
+    }
+    updateDateTime();
+    setInterval(updateDateTime, 1000);
+</script>
